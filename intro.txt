@@ -1,0 +1,164 @@
+- spécialiste en analyse de données
+  - collecter des données
+  - faire des transformations, traitements sur ces données
+  - potentiellement faire du stockage de ces données
+
+- Pour faire ces opérations, nous allons écrire des programmes en Python
+  - Nous sommes en quelques sortes entrain d'écrire des logiciels
+    - et donc, nous aurons besoin d'une manière, d'une philosophie
+    - nous permettant de mener à bien l'écriture de notre programme (logiciel)
+
+- Le logiciel que nous allons écrire:
+  - plusieurs personnes vont collaborer pour la mise en place de ce logiciel:
+    - dév-eloppeurs, data scientists, data analysts, .... (toute personne qui écrit du code)
+    - op-érateurs (toute personne chargé de faire fonctionner le code)
+  - il va posséder plusieurs versions (avec le temps, le logiciel évolue)
+  - il doit s'executer sur
+    - une machine (sur un serveur)
+    - plusieurs autres machines (les laptops des developpeurs/data scientists/admin systemes)
+
+- Devops
+  - philosophie nous permettant (en klk sortes) de
+    - "mener à bien" le developpement d'un logiciel
+  - ensemble de techniques et d'outils
+  - voici +/- quelques étapes permettant de décomposer le cycle devops:
+    - planifier
+      - definir au maximum, le plus précisément possible, les fonctionnalités du logiciel
+      - que dois faire mon logiciel ?
+    - programmer
+      - écriture proprement dite du code/programme
+      - mise en place des fonctions, classes, modules, ...
+    - build, construire
+      - fabriquer un executable, compiler le programme
+      - j'ai fini de programmer, je vais "construire" un "installeur"
+    - tester
+      - idéalement, quelqu'un qui est différent du developpeur doit tester
+      - vérifier que les fonctionnalités sont bien présentes
+      - vérifier que le logiciel fait bien ce qu'il prétend
+    - deployer
+      - phase dans laquelle je rends le logiciel "utilisable" par le plus grand nombre
+      - phase dans laquelle je rends le logiciel "accessible" par le plus grand nombre
+      - phase dans laquelle je fais la "mise en production"
+    - utilisation par le client final
+      - le logiciel a été déployé et donc les utilisateurs finaux peuvent s'en servir
+    - monitorer
+      - surveiller l'activité relative à l'utilisation de votre logiciel
+        - temps de réponse, performance, latence, ....
+        - comment se comporte le logiciel face à la montée en charge
+        - comment les utilisateurs "utilisent" votre logiciel
+          - est ce que les interfaces sont suffisament intuitives ?
+
+- Devops en une seule image:
+https://orangematter.solarwinds.com/wp-content/uploads/2022/03/DevOps-lifecycle-capabilities-1024x621.png
+
+- Devops:
+  - cette philosophie personne ne vous demande de la suivre au maximum
+  - prenez ce qui est bon pour vous
+  - cependant, on a remarqué que les "grandes" équipes de developpement logiciel
+    - utilisent cette philosophie
+
+- Pourquoi dev ? Pourquoi ops ?
+  - à une époque bien lointaine, ceux qui écrivaient le logiciel
+  - ne parlaient pas (ou très peu) avec ceux qui "font fonctionner" le logiciel
+  - on arrivait très rapidement à une situation telle que:
+    - les developpeurs ont produit le logiciel dans un environnement très spécifique
+    - les opérateurs travaillent dans un environnement très spécifique et différent du premier
+    - conclusion:
+      - le travail fourni par les premier ne peut s'executer dans l'env des seconds
+      - le logiciel fonctionnant sur un ordinateur ne fonctionne plus sur un autre
+
+- La philosophie est né aussi pour
+  - faire en sorte que les dev et les ops se parlent souvent et régulièrement
+  - éviter l'isolation des équipes
+  - maximiser le partage de l'information
+  - les 2 équipes doivent toujours travailler de concert
+
+- du point de vue d'un spécialiste en analyse de donnée, cela signifie:
+  - vous n'allez jamais travailler tout seul dans votre coin
+  - vous travaillerez toujours avec d'autres spécialistes
+  - parmi ces spécialistes, il y en aura dont le rôle est de maitriser
+    - l'infrastructure matérielle et logicielle d'execution
+  - discutez toujours avec les autres membres de votre équipe
+
+  - vous devez connaitre au moins un outil pour
+    - planifier vos taches
+    - écrire votre programme
+    - tester votre programme
+    - deployer votre programme
+    - monitorer votre programme
+
+- Concretement, quelle est la signification pour nous ?
+  - SAVOIR LIRE ET ÉCRIRE L'ANGLAIS (S'IL VOUS PLAIT)
+  - savoir definir et gerer son environnement de developpement
+    - editeur de texte (PyCharm, VSCode, ...),
+    - environnement virtuel(Conda, Virtualenv, ...)
+  - savoir faire la gestion de version
+    - Git (celui que nous utiliserons), Mercurial, Bazaar, ...
+  - savoir collaborer avec les autres membres de mon équipe
+    - Github, Gitlab, Bitbucket, ...
+  - savoir tester mon programme
+    - PyTest, Tox, Unittest, ....
+  - savoir deployer mon programme
+    - créer des conteneur de type Docker,
+    - configurer des serveurs avec Terraform+Ansible, ...
+    - configurer des serveurs avec Kubernetes (toute une autre histoire)
+  - monitoring
+    - il existe une infinité de logiciel permettant de faire du monitoring
+
+- Ce qui est primordial
+  - savoir travailler dans un environnement de type Linux et le fait de taper des commandes
+  - savoir manipuler les commandes de base Git
+  - savoir utiliser une plateforme telle que Github
+  - savoir manipuler les commandes de base Docker
+
+- Git, définition:
+  - Git est un système de contrôle de version distribué
+  - un langage va avoir différentes version
+  - une version est un état du logiciel à un instant t donné
+  - l'état du logiciel Python en 1991, n'est pas le même qu'aujourd'hui en 2023
+  - entre ces deux dates, le logiciel a eu plusieurs version
+
+  - pourquoi avoir besoin de gérer les versions de notre logiciel
+    - je veux pouvoir savoir comment est mon logiciel aujourd'hui ?
+    - je veux pouvoir savoir comment était mon logiciel hier ? avant hier ? il y a un mois ? ...
+    - je veux pouvoir savoir qui a effectué telle ou telle modification ?
+
+  - Git me permet de savoir:
+    - maintenir un historique du cycle de vie du logiciel
+    - savoir, qui a travaillé ? sur quelle partie du logiciel ? à quel instant ?
+
+- Nous apprendrons à utiliser Git car:
+  - c'est le plus connu
+  - c'est celui que vous risquez de rencontrer lorsque vous irez sur le terrain
+  - il est extremement connu et populaire
+  - Attention: cela ne signifie par que les autres (Mercurial, Bazaar) sont moins bons.
+
+- Installation, allez sur les liens suivants, télécharger et installer:
+  - https://git-scm.com/
+  - https://gitforwindows.org/ (pour les utilisateurs de Windows)
+    - après installation (sous Windows) on doit avoir:
+      - git bash (outil permettant de taper des commandes Git dans un env de type Linux)
+      - git cmd (outil permettant de taper des commandes Git dans un env de type Windows)
+      - git gui (outil permettant de manipuler Git sans taper de commandes)
+
+
+- Github, https://github.com
+  - chacun de vous dois créer son compte (déjà fait normalement)
+
+  - Plateforme dont le rôle va être de "faciliter" la collaboration entre developpeurs
+  - Plateforme se comportant aussi comme un reseau social centré autour du code
+  - Cette facilitation va se faire en s'appuyant sur un logiciel qu'on appelle.... Git.
+  - NB:
+    - Github ---> plateforme en ligne
+    - Git ------> logiciel qui s'installe sur votre ordinateur
+  - NB:
+    - Github ---> dépend de Git (je ne peux pas utiliser Github sans connaitre/utiliser Git)
+    - Git ------> ne dépend de rien d'autre (Je peux utiliser Git sans connaitre/utiliser Github)
+
+
+  - il existe des alternatives à Github
+    - Gitlab, https://about.gitlab.com/
+    - Bitbucket, https://bitbucket.org
+    - Disroot: https://git.disroot.org/
+      - Chacune de ses plateforme offre plus ou moins les mêmes services que Github
+      - Chacune de ses plateforme fonctionne en s'apuuyant sur Git
